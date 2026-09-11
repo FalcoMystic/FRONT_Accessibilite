@@ -15,7 +15,7 @@ Route::get('/alert', [MusculationController::class, 'index'])->name('musculation
 Route::get('/alert/{alert}', [MusculationController::class, 'show'])->name('musculation.show');
 
 Route::get('/alert', [CalisthenicsController::class, 'index'])->name('calisthenics.index');
-Route::get('/alert/{alert}', [CalisthenicsController::class, 'show'])->name('calisthenics.show');giyt 
+Route::get('/alert/{alert}', [CalisthenicsController::class, 'show'])->name('calisthenics.show');
 
 Route::get('/alert', [DietController::class, 'index'])->name('diet.index');
 Route::get('/alert/{alert}', [DietController::class, 'show'])->name('diet.show');
