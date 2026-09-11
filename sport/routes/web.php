@@ -8,17 +8,12 @@ use App\Http\Controllers\SitemapController;
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/alert', [HomeController::class, 'index'])->name('home.index');
-Route::get('/alert/{alert}', [HomeController::class, 'show'])->name('home.show');
+Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 
-Route::get('/alert', [MusculationController::class, 'index'])->name('musculation.index');
-Route::get('/alert/{alert}', [MusculationController::class, 'show'])->name('musculation.show');
+Route::get('/musculation', [MusculationController::class, 'index'])->name('musculation.index');
 
-Route::get('/alert', [CalisthenicsController::class, 'index'])->name('calisthenics.index');
-Route::get('/alert/{alert}', [CalisthenicsController::class, 'show'])->name('calisthenics.show');giyt 
+Route::get('/calisthenics', [CalisthenicsController::class, 'index'])->name('calisthenics.index');
 
-Route::get('/alert', [DietController::class, 'index'])->name('diet.index');
-Route::get('/alert/{alert}', [DietController::class, 'show'])->name('diet.show');
+Route::get('/diet', [DietController::class, 'index'])->name('diet.index');
 
-Route::get('/alert', [SitemapController::class, 'index'])->name('sitemap.index');
-Route::get('/alert/{alert}', [SitemapController::class, 'show'])->name('sitemap.show');
+Route::get('/sitemap', [SitemapController::class, 'index'])->name('sitemap.index');
