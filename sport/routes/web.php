@@ -8,7 +8,7 @@ use App\Http\Controllers\SitemapController;
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/home', [HomeController::class, 'index'])->name('home.index');
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('/musculation', [MusculationController::class, 'index'])->name('musculation.index');
 
