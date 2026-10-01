@@ -6,6 +6,52 @@
 @source "../**/*.js";
 
 @theme {
+    --color-noir: var(--couleur-noir);
+    --color-fond: var(--couleur-fond);
+    --color-texte-secondaire: var(--couleur-texte-secondaire);
+    --color-violet: var(--couleur-violet);
+    --color-violet-fonce: var(--couleur-violet-fonce);
+    --color-violet-clair: var(--couleur-violet-clair);
+    --color-bordure: var(--couleur-bordure);
+    --color-blanc: var(--couleur-blanc);
+    --color-texte-clair: var(--couleur-texte-clair);
+    --color-gris-clair: var(--couleur-gris-clair);
+    --color-texte-carte: var(--couleur-texte-carte);
+    --color-texte-indication: var(--couleur-texte-indication);
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+:root {
+    --couleur-noir: #171717;
+    --couleur-fond: #f4f1eb;
+    --couleur-texte-secondaire: #3f3b39;
+    --couleur-violet: #7c00ff;
+    --couleur-violet-fonce: #6500d3;
+    --couleur-violet-clair: #c99aff;
+    --couleur-bordure: rgb(23 23 23 / 20%);
+    --couleur-blanc: #ffffff;
+    --couleur-texte-clair: #f8f4e9;
+    --couleur-gris-clair: #d8d4ce;
+    --couleur-texte-carte: #e3ded5;
+    --couleur-texte-indication: #625d58;
+}
+
+.petit-titre {
+    @apply text-sm font-bold uppercase tracking-[0.24em];
+}
+
+.texte-principal {
+    @apply text-lg leading-8 text-texte-secondaire;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }
