@@ -12,8 +12,8 @@
                     <a class="mt-10 inline-flex items-center gap-5 rounded-full bg-[var(--color-background)] px-6 py-4 text-sm font-semibold text-[var(--color-text)] transition hover:bg-[var(--color-purple)] focus:outline-none focus:ring-4 focus:ring-[var(--color-text)] focus:ring-offset-2" href="#disciplines">Commencer l'exploration <span aria-hidden="true">↗</span></a>
                 </div>
 
-                <div class="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-[40%] border-8 border-[var(--color-background)] bg-[var(--color-surface-light)] shadow-[14px_14px_0_var(--color-purple)]">
-                    <img class="h-full w-full object-cover object-center" src="{{ asset('img/handstand.webp') }}" alt="Personne réalisant un équilibre sur les mains dans une salle de sport">
+                <div class="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-[40%] border-8 border-[#171717] bg-[#d9d5cf] shadow-[14px_14px_0_#6f28d9]">
+                    <img class="h-full w-full object-cover object-center" src="{{ asset('img/Salle de sport.jpg') }}" alt="Personne réalisant un équilibre sur les mains dans une salle de sport">
                 </div>
             </section>
 
