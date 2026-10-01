@@ -11,7 +11,7 @@
         <a class="nav-link" href="{{ route('diet.index') }}">Diet</a>
     </nav>
 
-    <a class="header-action" href="#disciplines">
+    <a class="header-action" href="#main">
         <span>Explorer</span>
         <span aria-hidden="true">↓</span>
     </a>
