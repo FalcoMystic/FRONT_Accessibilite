@@ -22,3 +22,14 @@
     --font-display: 'Tanker', sans-serif;
     --font-body: 'Space Grotesk', sans-serif;
 }
+
+:root {
+    --color-background: #17151a;
+    --color-surface-light: #e7e4e8;
+    --color-text: #f5f3f5;
+    --color-text-dark: #17151a;
+    --color-text-muted: #c8c4ca;
+    --color-gray: #6e6963;
+    --color-purple: #9d5cff;
+    --color-border: rgba(231, 228, 232, 0.24);
+}
