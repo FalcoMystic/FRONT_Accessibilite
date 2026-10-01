@@ -8,7 +8,7 @@
 
     <nav class="order-3 flex w-full items-center justify-center gap-5 text-xs font-semibold uppercase tracking-widest sm:order-2 sm:w-auto" aria-label="Navigation principale">
         <a class="{{ request()->routeIs('home.index') ? 'text-[var(--color-purple)]' : 'transition hover:text-[var(--color-purple)]' }}" href="{{ route('home.index') }}" @if (request()->routeIs('home.index')) aria-current="page" @endif>Accueil</a>
-        <a class="{{ request()->routeIs('calisthenics.index') ? 'text-[var(--color-purple)]' : 'transition hover:text-[var(--color-purple)]' }}" href="{{ route('calisthenics.index') }}" @if (request()->routeIs('calisthenics.index')) aria-current="page" @endif>Calisthénie</a>
+        <a class="{{ request()->routeIs('calisthenics.index') ? 'text-[var(--color-purple)]' : 'transition hover:text-[var(--color-purple)]' }}" href="{{ route('calisthenics.index') }}" @if (request()->routeIs('calisthenics.index')) aria-current="page" @endif>Callisthénie</a>
         <a class="{{ request()->routeIs('musculation.index') ? 'text-[var(--color-purple)]' : 'transition hover:text-[var(--color-purple)]' }}" href="{{ route('musculation.index') }}" @if (request()->routeIs('musculation.index')) aria-current="page" @endif>Musculation</a>
         <a class="{{ request()->routeIs('diet.index') ? 'text-[var(--color-purple)]' : 'transition hover:text-[var(--color-purple)]' }}" href="{{ route('diet.index') }}" @if (request()->routeIs('diet.index')) aria-current="page" @endif>Nutrition</a>
     </nav>

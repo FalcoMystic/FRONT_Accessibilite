@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Conseils accessibles pour adapter son alimentation à la musculation et à la calisthénie.">
+    <meta name="description" content="Conseils accessibles pour adapter son alimentation à la musculation et à la Callisthénie.">
     <title>Nutrition | TopDiff</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -20,7 +20,7 @@
             <nav aria-label="Navigation principale">
                 <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-semibold">
                     <li><a href="{{ route('musculation.index') }}" class="underline-offset-4 hover:underline focus:outline-none focus-visible:ring-4 focus-visible:ring-violet">Musculation</a></li>
-                    <li><a href="{{ route('calisthenics.index') }}" class="underline-offset-4 hover:underline focus:outline-none focus-visible:ring-4 focus-visible:ring-violet">Calisthénie</a></li>
+                    <li><a href="{{ route('calisthenics.index') }}" class="underline-offset-4 hover:underline focus:outline-none focus-visible:ring-4 focus-visible:ring-violet">Callisthénie</a></li>
                     <li><a href="{{ route('diet.index') }}" aria-current="page" class="text-violet-fonce underline decoration-2 underline-offset-4 focus:outline-none focus-visible:ring-4 focus-visible:ring-violet">Nutrition</a></li>
                 </ul>
             </nav>

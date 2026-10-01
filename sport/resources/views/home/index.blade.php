@@ -29,7 +29,7 @@
                 <div class="grid gap-4 md:grid-cols-3">
                     <a class="group flex min-h-72 flex-col justify-between rounded-3xl bg-[var(--color-purple)] p-7 text-[var(--color-text)] transition hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[var(--color-text)] focus:ring-offset-2" href="{{ route('calisthenics.index') }}">
                         <span class="flex items-center justify-between text-xs font-semibold uppercase tracking-widest"><span>01 / 03</span><span aria-hidden="true">↗</span></span>
-                        <span><strong class="block font-display text-4xl font-normal">Calisthénie</strong><span class="mt-2 block text-sm text-[var(--color-text)]/75">Maîtrise ton poids.</span></span>
+                        <span><strong class="block font-display text-4xl font-normal">Callisthénie</strong><span class="mt-2 block text-sm text-[var(--color-text)]/75">Maîtrise ton poids.</span></span>
                         <span class="self-end text-3xl transition group-hover:translate-x-1" aria-hidden="true">→</span>
                     </a>
                     <a class="group flex min-h-72 flex-col justify-between rounded-3xl bg-[var(--color-surface-light)] p-7 text-[var(--color-text-dark)] transition hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[var(--color-text)] focus:ring-offset-2" href="{{ route('musculation.index') }}">

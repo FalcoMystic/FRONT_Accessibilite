@@ -16,7 +16,7 @@
                 </a>
                 <a class="group flex min-h-48 flex-col justify-between rounded-3xl bg-[var(--color-surface-light)] p-7 text-[var(--color-text-dark)] transition hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[var(--color-text)] focus:ring-offset-2" href="{{ route('calisthenics.index') }}">
                     <span class="flex items-center justify-between text-xs font-semibold uppercase tracking-widest"><span>02 / 04</span><span aria-hidden="true">↗</span></span>
-                    <span><strong class="block font-display text-4xl font-normal">Calisthénie</strong><span class="mt-2 block text-sm text-[var(--color-gray)]">Maîtrise ton poids.</span></span>
+                    <span><strong class="block font-display text-4xl font-normal">Callisthénie</strong><span class="mt-2 block text-sm text-[var(--color-gray)]">Maîtrise ton poids.</span></span>
                 </a>
                 <a class="group flex min-h-48 flex-col justify-between rounded-3xl border border-[var(--color-border)] bg-[var(--color-text)] p-7 text-[var(--color-text-dark)] transition hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[var(--color-text)] focus:ring-offset-2" href="{{ route('musculation.index') }}">
                     <span class="flex items-center justify-between text-xs font-semibold uppercase tracking-widest"><span>03 / 04</span><span aria-hidden="true">↗</span></span>
