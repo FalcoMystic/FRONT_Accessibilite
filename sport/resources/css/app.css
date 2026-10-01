@@ -409,18 +409,18 @@ h2 {
 }
 
 :root {
-    --couleur-noir: #171717;
-    --couleur-fond: #f4f1eb;
-    --couleur-texte-secondaire: #3f3b39;
-    --couleur-violet: #7c00ff;
-    --couleur-violet-fonce: #6500d3;
-    --couleur-violet-clair: #c99aff;
-    --couleur-bordure: rgb(23 23 23 / 20%);
-    --couleur-blanc: #ffffff;
-    --couleur-texte-clair: #f8f4e9;
-    --couleur-gris-clair: #d8d4ce;
-    --couleur-texte-carte: #e3ded5;
-    --couleur-texte-indication: #625d58;
+    --couleur-noir: var(--color-text-dark);
+    --couleur-fond: var(--color-background);
+    --couleur-texte-secondaire: var(--color-text-muted);
+    --couleur-violet: var(--color-purple);
+    --couleur-violet-fonce: var(--color-purple);
+    --couleur-violet-clair: var(--color-surface-light);
+    --couleur-bordure: var(--color-border);
+    --couleur-blanc: var(--color-surface-light);
+    --couleur-texte-clair: var(--color-text);
+    --couleur-gris-clair: var(--color-gray);
+    --couleur-texte-carte: var(--color-text-muted);
+    --couleur-texte-indication: var(--color-gray);
 }
 
 .petit-titre {
