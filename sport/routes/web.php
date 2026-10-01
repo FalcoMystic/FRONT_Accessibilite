@@ -7,6 +7,7 @@ use App\Http\Controllers\DietController;
 use App\Http\Controllers\SitemapController;
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MusculationController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
