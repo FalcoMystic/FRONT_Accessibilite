@@ -8,7 +8,9 @@
     <title>Callisthénie : bénéfices et conseils d’entraînement</title>
 </head>
 
-<body class="bg-gray-700 text-white">
+<body class="text-white">
+    <div class="w-auto mx-6 md:mx-20"><x-commun.header /></div>
+
     <a href="#contenu"
         class="sr-only focus:not-sr-only focus:absolute focus:z-10 focus:rounded-md focus:bg-white focus:p-3 focus:text-black">
         Aller au contenu principal
@@ -33,7 +35,7 @@
                     souplesse, la mobilité articulaire et la stabilité. En apprenant à contrôler chaque mouvement, on
                     développe progressivement son équilibre, sa coordination et une meilleure maîtrise de son corps.</p>
             </section>
-            <aside class="mb-10 border-l-4 border-yellow-400 bg-gray-800 p-6">
+            <aside class="mb-10 border-l-4 border-purple-600 bg-gray-800 p-6">
                 <blockquote class="text-xl italic">
                     « La progression ne se mesure pas seulement à la difficulté des mouvements, mais aussi à la maîtrise
                     et à la régularité avec lesquelles ils sont réalisés. »
