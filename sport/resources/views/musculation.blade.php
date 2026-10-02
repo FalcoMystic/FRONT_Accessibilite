@@ -1,285 +1,158 @@
 {{-- resources/views/musculation.blade.php --}}
-<!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La musculation : bienfaits, organisation et exercices fondamentaux</title>
-    <!-- Tailwind CSS via Vite -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<body class="bg-[#0e0e0e] text-neutral-200 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#7a0fff] selection:text-white">
+<x-layout.base title="Musculation : principes et exercices - TOPDIFF">
 
-    <!-- Lien d'évitement pour les lecteurs d'écran et la navigation au clavier -->
-    <a href="#contenu-principal" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-3 focus:bg-[#7a0fff] focus:text-white focus:font-bold focus:rounded-lg focus:shadow-lg">
+    <!-- Appel du header global du site -->
+    <x-commun.header />
+
+    <!-- Lien d'évitement pour l'accessibilité (Navigation au clavier) -->
+    <a href="#contenu-principal" class="sr-only focus:not-sr-only focus:fixed focus:top-24 focus:left-4 focus:z-50 focus:px-6 focus:py-3 focus:bg-purple-500 focus:text-white focus:font-bold focus:rounded focus:shadow-xl focus:outline-none focus:ring-4 focus:ring-white">
         Aller au contenu principal
     </a>
 
-    <!-- En-tête de la page -->
-    <header role="banner" class="border-b border-neutral-800 bg-[#121212]/90 backdrop-blur-md sticky top-0 z-40">
-        <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col items-center text-center">
-            <div class="flex items-center space-x-3 mb-3" aria-hidden="true">
-                <div class="w-3 h-3 bg-[#7a0fff] rounded-full shadow-[0_0_12px_#7a0fff]"></div>
-                <span class="text-xs uppercase tracking-widest text-neutral-400 font-semibold">Guide Pédagogique</span>
-            </div>
-            <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-3">
-                La musculation : comprendre, débuter et progresser
-            </h1>
-            <p class="text-neutral-400 max-w-2xl text-sm md:text-base leading-relaxed">
-                Un guide complet pour découvrir la musculation, structurer ses séances et maîtriser les mouvements essentiels.
-            </p>
-        </div>
-    </header>
-
-    <!-- Navigation / Sommaire -->
-    <nav aria-label="Sommaire de la page" class="bg-[#141414] border-b border-neutral-800 py-4 shadow-inner">
-        <div class="max-w-5xl mx-auto px-6">
-            <ul class="flex flex-wrap justify-center gap-6 md:gap-8 text-sm uppercase tracking-wider font-medium" role="list">
-                <li>
-                    <a href="#presentation" class="hover:text-white focus:text-white transition-colors hover:border-b-2 hover:border-[#7a0fff] focus:outline-none focus:ring-2 focus:ring-[#7a0fff] pb-1">Présentation</a>
-                </li>
-                <li>
-                    <a href="#organisation" class="hover:text-white focus:text-white transition-colors hover:border-b-2 hover:border-[#7a0fff] pb-1 focus:outline-none focus:ring-2 focus:ring-[#7a0fff]">Organisation</a>
-                </li>
-                <li>
-                    <a href="#exercices" class="hover:text-white focus:text-white transition-colors hover:border-b-2 hover:border-[#7a0fff] pb-1 focus:outline-none focus:ring-2 focus:ring-[#7a0fff]">Exercices</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
     <!-- Contenu Principal -->
-    <main id="contenu-principal" role="main" class="max-w-5xl mx-auto px-6 py-12 w-full space-y-16" tabindex="-1">
-
-        <!-- Image d'illustration accessible au début de la page -->
-        <div class="w-full overflow-hidden rounded-2xl border border-neutral-800 shadow-2xl bg-[#161616]">
-            <img 
-                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop" 
-                alt="Vue générale d'une salle de musculation moderne avec des équipements de fitness et des poids alignés." 
-                class="w-full h-72 md:h-96 object-cover opacity-85 hover:opacity-100 transition-opacity duration-500"
-            />
-        </div>
-
-        <!-- Section 1 : Présentation -->
-        <section id="presentation" aria-labelledby="presentation-titre" class="space-y-8">
-            <div class="border-l-4 border-[#7a0fff] pl-4">
-                <h2 id="presentation-titre" class="text-2xl md:text-3xl font-bold text-white tracking-tight">
-                    Présentation de la musculation
-                </h2>
-            </div>
-
-            <div class="bg-[#161616] border border-neutral-800 p-6 md:p-8 rounded-xl shadow-lg">
-                <p class="leading-relaxed text-neutral-300">
-                    La musculation est une pratique physique consistant à solliciter les muscles du corps
-                    contre une résistance, qu'il s'agisse de charges libres, de machines guidées ou du
-                    simple poids du corps. Son objectif est de renforcer progressivement les fibres
-                    musculaires en les soumettant à un effort contrôlé et répété, ce qui entraîne des
-                    adaptations durables au fil des séances.
+    <main id="contenu-principal" role="main" class="max-w-7xl mx-auto px-6 py-12 md:py-20 w-full space-y-24 focus:outline-none text-gray-200" tabindex="-1">
+        
+        <!-- EN-TÊTE DE LA PAGE -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" aria-labelledby="hero-titre">
+            <div>
+                <p class="text-purple-500 uppercase tracking-widest font-bold text-sm mb-4" aria-hidden="true">
+                    Guide pratique
                 </p>
+                <h1 id="hero-titre" class="text-6xl md:text-8xl font-black text-white uppercase leading-none tracking-tight font-['Tanker'] mb-6">
+                    La musculation.<br>
+                    <span class="text-purple-500">Une pratique<br>complète.</span>
+                </h1>
+                <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 font-['Space_Grotesk']">
+                    Un guide complet pour découvrir la musculation, structurer ses séances et maîtriser les mouvements essentiels.
+                </p>
+                
+                <!-- Menu local (Boutons accessibles) -->
+                <nav aria-label="Sommaire de la page" class="flex flex-wrap gap-4 font-['Space_Grotesk']">
+                    <a href="#presentation" class="inline-block bg-purple-500 text-white font-bold uppercase tracking-wider px-6 py-3 hover:bg-purple-400 transition-colors focus:outline-none focus:ring-4 focus:ring-purple-300">
+                        Présentation &darr;
+                    </a>
+                    <a href="#organisation" class="inline-block border border-gray-600 text-white font-bold uppercase tracking-wider px-6 py-3 hover:border-white transition-colors focus:outline-none focus:ring-4 focus:ring-gray-400">
+                        Organisation &darr;
+                    </a>
+                    <a href="#exercices" class="inline-block border border-gray-600 text-white font-bold uppercase tracking-wider px-6 py-3 hover:border-white transition-colors focus:outline-none focus:ring-4 focus:ring-gray-400">
+                        Exercices &darr;
+                    </a>
+                </nav>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <article aria-labelledby="bienfaits-corps-titre" class="bg-[#161616] border border-neutral-800 p-6 rounded-xl shadow-lg flex flex-col justify-between">
-                    <div>
-                        <h3 id="bienfaits-corps-titre" class="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-[#7a0fff]" aria-hidden="true"></span>
-                            Les bienfaits sur le corps
-                        </h3>
-                        <p class="text-sm text-neutral-400 leading-relaxed">
-                            Pratiquée régulièrement, la musculation permet d'augmenter la masse musculaire,
-                            d'améliorer la force et d'affiner la silhouette. Elle renforce également les
-                            tendons, les ligaments et la densité osseuse, ce qui réduit le risque de
-                            blessures et de fractures. La posture et la mobilité articulaire bénéficient
-                            aussi d'un travail musculaire équilibré et bien réparti sur l'ensemble du corps.
-                        </p>
-                    </div>
-                </article>
-
-                <article aria-labelledby="bienfaits-sante-titre" class="bg-[#161616] border border-neutral-800 p-6 rounded-xl shadow-lg flex flex-col justify-between">
-                    <div>
-                        <h3 id="bienfaits-sante-titre" class="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-[#7a0fff]" aria-hidden="true"></span>
-                            Les bienfaits sur la santé globale
-                        </h3>
-                        <p class="text-sm text-neutral-400 leading-relaxed">
-                            Au-delà de l'aspect esthétique, la musculation a un impact positif sur la santé
-                            générale : elle favorise un métabolisme plus actif, aide à réguler la glycémie et
-                            contribue à la prévention de nombreuses maladies chroniques. Elle a également des
-                            effets bénéfiques reconnus sur le bien-être mental, en réduisant le stress et en
-                            améliorant la qualité du sommeil et la confiance en soi.
-                        </p>
-                    </div>
-                </article>
-            </div>
+            
+            <!-- Image d'illustration accessible -->
+            <figure aria-label="Illustration de la thématique musculation">
+                <img 
+                    src="{{ asset('img/Salle de sport.jpg') }}" 
+                    alt="Vue générale d'une salle de musculation moderne avec des sportifs s'entraînant sur diverses machines et poids libres." 
+                    class="w-full h-auto object-cover shadow-2xl"
+                />
+            </figure>
         </section>
 
-        <!-- Section 2 : Organisation -->
-        <section id="organisation" aria-labelledby="organisation-titre" class="space-y-8">
-            <div class="border-l-4 border-[#7a0fff] pl-4">
-                <h2 id="organisation-titre" class="text-2xl md:text-3xl font-bold text-white tracking-tight">
+        <!-- SECTION : PRÉSENTATION -->
+        <section id="presentation" aria-labelledby="titre-presentation" class="scroll-mt-32 space-y-8 focus-within:ring-2 focus-within:ring-purple-500 focus-within:ring-offset-8 focus-within:ring-offset-[#111] outline-none transition-all">
+            <header>
+                <h2 id="titre-presentation" class="text-4xl md:text-6xl font-black text-white uppercase font-['Tanker'] tracking-tight mb-6">
+                    Présentation de la musculation
+                </h2>
+                <p class="text-gray-300 text-lg leading-relaxed max-w-4xl font-['Space_Grotesk']">
+                    La musculation consiste à exercer les muscles contre une résistance, avec le poids du corps, des haltères, des barres, des machines ou des élastiques. Les mouvements sont répétés de façon contrôlée afin de développer la force, l'endurance musculaire et la maîtrise du geste.
+                </p>
+                <p class="text-gray-300 text-lg leading-relaxed max-w-4xl mt-4 font-['Space_Grotesk']">
+                    Pratiquée régulièrement et avec une technique adaptée, elle contribue à renforcer les muscles, les os et les articulations. Elle peut également améliorer la posture, l'équilibre et la capacité à accomplir les gestes du quotidien. Associée à une alimentation variée, à un sommeil suffisant et à une activité cardiovasculaire, elle participe à une meilleure santé globale.
+                </p>
+                <p class="text-gray-400 text-md leading-relaxed max-w-4xl mt-4 italic font-['Space_Grotesk']">
+                    Les bénéfices dépendent de la régularité, de la progression et de l'adaptation de l'effort aux capacités de chaque personne. En cas de douleur persistante, de problème de santé ou de reprise après une longue interruption, demandez conseil à un professionnel de santé.
+                </p>
+            </header>
+        </section>
+
+        <!-- SECTION : ORGANISATION -->
+        <section id="organisation" aria-labelledby="titre-organisation" class="scroll-mt-32 space-y-10 focus-within:ring-2 focus-within:ring-purple-500 focus-within:ring-offset-8 focus-within:ring-offset-[#111] outline-none transition-all">
+            <header>
+                <h2 id="titre-organisation" class="text-4xl md:text-6xl font-black text-white uppercase font-['Tanker'] tracking-tight mb-6">
                     Comment bien débuter et s'organiser
                 </h2>
-            </div>
-
-            <div class="bg-[#161616] border border-neutral-800 p-6 md:p-8 rounded-xl shadow-lg">
-                <p class="leading-relaxed text-neutral-300">
-                    Pour un débutant, la réussite en musculation repose avant tout sur la régularité et
-                    la progressivité plutôt que sur l'intensité. Il est essentiel d'apprendre les bons
-                    gestes techniques avant d'augmenter les charges, et de laisser au corps le temps de
-                    récupérer entre les séances afin d'éviter le surentraînement et les blessures.
+                <p class="text-gray-300 text-lg leading-relaxed max-w-4xl font-['Space_Grotesk']">
+                    Pour commencer en salle, choisissez des charges qui permettent de conserver une posture stable et d'effectuer chaque mouvement avec amplitude et contrôle. Une séance peut comprendre un échauffement progressif, les exercices de renforcement, puis un retour au calme. Apprenez les réglages des machines et demandez une démonstration à un encadrant lorsque vous ne maîtrisez pas un mouvement.
                 </p>
-            </div>
+            </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <article aria-labelledby="fullbody-titre" class="bg-[#161616] border border-neutral-800 p-6 rounded-xl shadow-lg">
-                    <h3 id="fullbody-titre" class="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-[#7a0fff]" aria-hidden="true"></span>
-                        Le programme Full-body
-                    </h3>
-                    <p class="text-sm text-neutral-400 leading-relaxed">
-                        Le programme "Full-body" (ou "corps complet") consiste à travailler l'ensemble
-                        des grands groupes musculaires à chaque séance, plutôt que de répartir le travail
-                        sur plusieurs jours par zone du corps. Cette approche est particulièrement
-                        recommandée pour les débutants, car elle permet de solliciter chaque muscle avec
-                        une fréquence plus élevée tout en laissant suffisamment de temps de récupération
-                        entre deux entraînements.
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 font-['Space_Grotesk']">
+                <article aria-labelledby="fullbody-titre" class="border-t border-gray-800 pt-6">
+                    <h3 id="fullbody-titre" class="text-2xl font-bold text-purple-500 mb-4 uppercase">Un programme Full-body trois jours par semaine</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Le programme Full-body sollicite les principaux groupes musculaires au cours de chaque séance. Trois entraînements hebdomadaires, séparés par au moins un jour de récupération, offrent un cadre simple et régulier. Par exemple, les séances peuvent avoir lieu le lundi, le mercredi et le vendredi.
                     </p>
+                    <ol class="space-y-4 text-gray-300" role="list">
+                        <li class="pl-4 border-l-2 border-purple-500"><strong class="text-white">Jour 1 :</strong> travail technique à intensité modérée avec un mouvement de jambes, une poussée, une traction et un exercice de gainage.</li>
+                        <li class="pl-4 border-l-2 border-purple-500"><strong class="text-white">Jour 2 :</strong> reprise des mêmes grandes familles de mouvements avec des variantes adaptées, en privilégiant la qualité d'exécution.</li>
+                        <li class="pl-4 border-l-2 border-purple-500"><strong class="text-white">Jour 3 :</strong> séance complète et progressive, sans chercher l'échec musculaire, suivie d'un repos suffisant avant la semaine suivante.</li>
+                    </ol>
                 </article>
 
-                <article aria-labelledby="organisation-semaine-titre" class="bg-[#161616] border border-neutral-800 p-6 rounded-xl shadow-lg">
-                    <h3 id="organisation-semaine-titre" class="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-[#7a0fff]" aria-hidden="true"></span>
-                        Une organisation sur 3 jours par semaine
-                    </h3>
-                    <p class="text-sm text-neutral-400 leading-relaxed mb-4">
-                        Le format Full-body est particulièrement efficace lorsqu'il est réparti sur
-                        trois séances hebdomadaires, espacées d'au moins une journée de repos. Cette
-                        fréquence offre un excellent compromis entre volume d'entraînement, récupération
-                        musculaire et régularité sur le long terme, ce qui en fait un rythme idéal pour
-                        progresser durablement sans s'épuiser.
-                    </p>
-                    <ul class="space-y-2 text-sm bg-neutral-900/60 p-4 rounded-lg border border-neutral-800/80" role="list">
-                        <li class="flex items-center gap-2"><span class="text-[#7a0fff] font-bold" aria-hidden="true">▪</span> <strong>Jour 1 :</strong> séance Full-body</li>
-                        <li class="flex items-center gap-2"><span class="text-neutral-500 font-bold" aria-hidden="true">▪</span> <strong>Jour 2 :</strong> repos ou activité légère</li>
-                        <li class="flex items-center gap-2"><span class="text-[#7a0fff] font-bold" aria-hidden="true">▪</span> <strong>Jour 3 :</strong> séance Full-body</li>
-                        <li class="flex items-center gap-2"><span class="text-neutral-500 font-bold" aria-hidden="true">▪</span> <strong>Jour 4 :</strong> repos ou activité légère</li>
-                        <li class="flex items-center gap-2"><span class="text-[#7a0fff] font-bold" aria-hidden="true">▪</span> <strong>Jour 5 :</strong> séance Full-body</li>
-                        <li class="flex items-center gap-2"><span class="text-neutral-500 font-bold" aria-hidden="true">▪</span> <strong>Jours 6 et 7 :</strong> repos complet</li>
+                <article aria-labelledby="reperes-titre" class="border-t border-gray-800 pt-6">
+                    <h3 id="reperes-titre" class="text-2xl font-bold text-purple-500 mb-4 uppercase">Les repères d'une séance équilibrée</h3>
+                    <ul class="space-y-4 text-gray-300" role="list">
+                        <li class="flex gap-3"><span class="text-purple-500" aria-hidden="true">✔</span> Commencer par cinq à dix minutes de mobilisation et d'échauffement progressif.</li>
+                        <li class="flex gap-3"><span class="text-purple-500" aria-hidden="true">✔</span> Réaliser deux à quatre séries par exercice selon le niveau et le volume prévu.</li>
+                        <li class="flex gap-3"><span class="text-purple-500" aria-hidden="true">✔</span> Garder une à trois répétitions possibles en réserve pour apprendre à progresser sans précipitation.</li>
+                        <li class="flex gap-3"><span class="text-purple-500" aria-hidden="true">✔</span> Prendre le temps de récupérer entre les séries et boire régulièrement.</li>
+                        <li class="flex gap-3"><span class="text-purple-500" aria-hidden="true">✔</span> Noter les charges, les répétitions et les sensations pour suivre les progrès.</li>
+                        <li class="flex gap-3"><span class="text-purple-500" aria-hidden="true">✔</span> Prévoir des jours sans musculation pour permettre la récupération des muscles et du système nerveux.</li>
                     </ul>
                 </article>
             </div>
         </section>
 
-        <!-- Section 3 : Exercices -->
-        <section id="exercices" aria-labelledby="exercices-titre" class="space-y-8">
-            <div class="border-l-4 border-[#7a0fff] pl-4">
-                <h2 id="exercices-titre" class="text-2xl md:text-3xl font-bold text-white tracking-tight">
+        <!-- SECTION : EXERCICES -->
+        <section id="exercices" aria-labelledby="titre-exercices" class="scroll-mt-32 space-y-10 focus-within:ring-2 focus-within:ring-purple-500 focus-within:ring-offset-8 focus-within:ring-offset-[#111] outline-none transition-all">
+            <header>
+                <h2 id="titre-exercices" class="text-4xl md:text-6xl font-black text-white uppercase font-['Tanker'] tracking-tight mb-6">
                     Les exercices fondamentaux
                 </h2>
-            </div>
-
-            <div class="bg-[#161616] border border-neutral-800 p-6 rounded-xl shadow-lg">
-                <p class="text-neutral-300">
-                    Voici une sélection d'exercices polyvalents, particulièrement adaptés à une routine
-                    Full-body, car ils sollicitent plusieurs groupes musculaires en un seul mouvement.
+                <p class="text-gray-300 text-lg leading-relaxed max-w-4xl font-['Space_Grotesk']">
+                    Ces exercices couvrent les principaux mouvements utiles dans une routine Full-body. Commencez par une variante que vous pouvez réaliser sans douleur et faites-vous corriger si nécessaire.
                 </p>
-            </div>
+            </header>
 
-            <!-- Grille d'exercices -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- 1. Squat -->
-                <article aria-labelledby="squat-titre" class="bg-[#161616] border border-neutral-800 p-6 rounded-xl shadow-lg flex flex-col justify-between hover:border-neutral-700 transition-colors">
-                    <div>
-                        <h3 id="squat-titre" class="text-lg font-semibold text-white mb-2 text-[#7a0fff]">Le squat</h3>
-                        <p class="text-sm text-neutral-400 leading-relaxed mb-4">
-                            Debout, les pieds écartés à la largeur des épaules, le squat consiste à fléchir
-                            les genoux et les hanches pour descendre le bassin comme pour s'asseoir, puis à
-                            remonter en poussant sur les jambes. Il peut se réaliser à poids de corps ou avec
-                            une barre chargée sur le haut du dos.
-                        </p>
-                    </div>
-                    <div class="text-xs bg-neutral-900 p-3 rounded border border-neutral-800 text-neutral-300">
-                        <strong>Muscles ciblés :</strong> quadriceps, ischio-jambiers, fessiers et gainage lombaire.
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-['Space_Grotesk']">
+                
+                <article aria-labelledby="squat-titre" class="border-t border-gray-800 pt-6">
+                    <h3 id="squat-titre" class="text-2xl font-bold text-white mb-3 uppercase tracking-wide">Squat</h3>
+                    <p class="text-gray-400 leading-relaxed mb-4">Le squat consiste à fléchir les hanches et les genoux en gardant le buste maîtrisé, puis à repousser le sol pour revenir debout.</p>
+                    <p class="text-sm text-gray-300"><strong class="text-purple-500">Cible :</strong> Quadriceps, fessiers et ischio-jambiers, avec gainage.</p>
                 </article>
 
-                <!-- 2. Développé couché -->
-                <article aria-labelledby="developpe-couche-titre" class="bg-[#161616] border border-neutral-800 p-6 rounded-xl shadow-lg flex flex-col justify-between hover:border-neutral-700 transition-colors">
-                    <div>
-                        <h3 id="developpe-couche-titre" class="text-lg font-semibold text-white mb-2 text-[#7a0fff]">Le développé couché</h3>
-                        <p class="text-sm text-neutral-400 leading-relaxed mb-4">
-                            Allongé sur un banc, la barre est descendue vers la poitrine puis repoussée à la
-                            verticale des épaules jusqu'à l'extension complète des bras. C'est l'exercice de
-                            référence pour développer la force et le volume du haut du corps en poussée.
-                        </p>
-                    </div>
-                    <div class="text-xs bg-neutral-900 p-3 rounded border border-neutral-800 text-neutral-300">
-                        <strong>Muscles ciblés :</strong> pectoraux, triceps et épaules (faisceau antérieur).
-                    </div>
+                <article aria-labelledby="sd-titre" class="border-t border-gray-800 pt-6">
+                    <h3 id="sd-titre" class="text-2xl font-bold text-white mb-3 uppercase tracking-wide">Soulevé de terre</h3>
+                    <p class="text-gray-400 leading-relaxed mb-4">La charge proche des jambes, on pousse dans le sol et on redresse les hanches en conservant le dos stable, puis on repose avec contrôle.</p>
+                    <p class="text-sm text-gray-300"><strong class="text-purple-500">Cible :</strong> Fessiers, ischio-jambiers, dos et avant-bras.</p>
                 </article>
 
-                <!-- 3. Tirage horizontal -->
-                <article aria-labelledby="tirage-titre" class="bg-[#161616] border border-neutral-800 p-6 rounded-xl shadow-lg flex flex-col justify-between hover:border-neutral-700 transition-colors">
-                    <div>
-                        <h3 id="tirage-titre" class="text-lg font-semibold text-white mb-2 text-[#7a0fff]">Le tirage horizontal (rowing)</h3>
-                        <p class="text-sm text-neutral-400 leading-relaxed mb-4">
-                            Buste penché vers l'avant, le dos droit, ce mouvement consiste à tirer une barre
-                            ou des haltères vers l'abdomen en rapprochant les omoplates. Il constitue le
-                            complément indispensable du développé couché en travaillant le dos en tirage.
-                        </p>
-                    </div>
-                    <div class="text-xs bg-neutral-900 p-3 rounded border border-neutral-800 text-neutral-300">
-                        <strong>Muscles ciblés :</strong> grand dorsal, trapèzes, rhomboïdes et biceps.
-                    </div>
+                <article aria-labelledby="dc-titre" class="border-t border-gray-800 pt-6">
+                    <h3 id="dc-titre" class="text-2xl font-bold text-white mb-3 uppercase tracking-wide">Développé couché</h3>
+                    <p class="text-gray-400 leading-relaxed mb-4">Allongé sur un banc, on descend la barre vers la poitrine, puis on pousse les charges vers le haut sans perdre la stabilité des épaules.</p>
+                    <p class="text-sm text-gray-300"><strong class="text-purple-500">Cible :</strong> Pectoraux, triceps et partie antérieure des épaules.</p>
                 </article>
 
-                <!-- 4. Soulevé de terre -->
-                <article aria-labelledby="solevé-terre-titre" class="bg-[#161616] border border-neutral-800 p-6 rounded-xl shadow-lg flex flex-col justify-between hover:border-neutral-700 transition-colors">
-                    <div>
-                        <h3 id="solevé-terre-titre" class="text-lg font-semibold text-white mb-2 text-[#7a0fff]">Le soulevé de terre</h3>
-                        <p class="text-sm text-neutral-400 leading-relaxed mb-4">
-                            La barre posée au sol est soulevée en gardant le dos droit, en initiant le
-                            mouvement par une poussée des jambes et une extension des hanches, jusqu'à une
-                            position debout complète. C'est l'un des mouvements les plus complets pour
-                            l'ensemble de la chaîne postérieure.
-                        </p>
-                    </div>
-                    <div class="text-xs bg-neutral-900 p-3 rounded border border-neutral-800 text-neutral-300">
-                        <strong>Muscles ciblés :</strong> ischio-jambiers, fessiers, lombaires et trapèzes.
-                    </div>
+                <article aria-labelledby="traction-titre" class="border-t border-gray-800 pt-6">
+                    <h3 id="traction-titre" class="text-2xl font-bold text-white mb-3 uppercase tracking-wide">Traction / Tirage</h3>
+                    <p class="text-gray-400 leading-relaxed mb-4">Tirer le corps vers une barre, ou une poignée vers le haut de la poitrine, en abaissant les épaules et en contrôlant la remontée.</p>
+                    <p class="text-sm text-gray-300"><strong class="text-purple-500">Cible :</strong> Grand dorsal, muscles du haut du dos et biceps.</p>
                 </article>
 
-                <!-- 5. Développé militaire -->
-                <article aria-labelledby="developpe-militaire-titre" class="bg-[#161616] border border-neutral-800 p-6 rounded-xl shadow-lg flex flex-col justify-between hover:border-neutral-700 transition-colors">
-                    <div>
-                        <h3 id="developpe-militaire-titre" class="text-lg font-semibold text-white mb-2 text-[#7a0fff]">Le développé militaire</h3>
-                        <p class="text-sm text-neutral-400 leading-relaxed mb-4">
-                            Debout ou assis, une barre ou des haltères sont poussés au-dessus de la tête
-                            depuis la hauteur des épaules jusqu'à l'extension complète des bras. Cet exercice
-                            renforce les épaules tout en sollicitant fortement la sangle abdominale pour
-                            stabiliser le corps.
-                        </p>
-                    </div>
-                    <div class="text-xs bg-neutral-900 p-3 rounded border border-neutral-800 text-neutral-300">
-                        <strong>Muscles ciblés :</strong> épaules (deltoïdes), triceps et gainage abdominal.
-                    </div>
+                <article aria-labelledby="dm-titre" class="border-t border-gray-800 pt-6">
+                    <h3 id="dm-titre" class="text-2xl font-bold text-white mb-3 uppercase tracking-wide">Développé vertical</h3>
+                    <p class="text-gray-400 leading-relaxed mb-4">Depuis une position stable, on pousse les haltères ou la barre au-dessus de la tête, puis on redescend lentement sans cambrer le dos.</p>
+                    <p class="text-sm text-gray-300"><strong class="text-purple-500">Cible :</strong> Épaules et triceps ; les muscles du tronc stabilisent le mouvement.</p>
                 </article>
 
-                <!-- 6. Traction -->
-                <article aria-labelledby="traction-titre" class="bg-[#161616] border border-neutral-800 p-6 rounded-xl shadow-lg flex flex-col justify-between hover:border-neutral-700 transition-colors">
-                    <div>
-                        <h3 id="traction-titre" class="text-lg font-semibold text-white mb-2 text-[#7a0fff]">La traction (tirage vertical)</h3>
-                        <p class="text-sm text-neutral-400 leading-relaxed mb-4">
-                            Suspendu à une barre fixe, les mains en pronation ou en supination, le corps est
-                            tiré vers le haut jusqu'à ce que le menton dépasse la barre, puis redescendu de
-                            façon contrôlée. Pour les débutants, une version assistée ou un tirage vertical
-                            à la machine permet de progresser vers l'exercice complet.
-                        </p>
-                    </div>
-                    <div class="text-xs bg-neutral-900 p-3 rounded border border-neutral-800 text-neutral-300">
-                        <strong>Muscles ciblés :</strong> grand dorsal, biceps et avant-bras.
-                    </div>
+                <article aria-labelledby="gainage-titre" class="border-t border-gray-800 pt-6">
+                    <h3 id="gainage-titre" class="text-2xl font-bold text-white mb-3 uppercase tracking-wide">Gainage</h3>
+                    <p class="text-gray-400 leading-relaxed mb-4">En appui sur les avant-bras ou les mains et sur les pieds ou genoux, on maintient le corps aligné en contractant la sangle abdominale.</p>
+                    <p class="text-sm text-gray-300"><strong class="text-purple-500">Cible :</strong> Muscles profonds de l'abdomen, lombaires, épaules et hanches.</p>
                 </article>
 
             </div>
@@ -287,10 +160,7 @@
 
     </main>
 
-    <!-- Pied de page -->
-    <footer role="contentinfo" class="border-t border-neutral-800 bg-[#121212] py-8 text-center text-xs text-neutral-400 uppercase tracking-widest mt-20">
-        <p>Guide pédagogique sur la musculation à destination des pratiquants débutants.</p>
-    </footer>
+    <!-- Appel du footer global du site -->
+    <x-commun.footer />
 
-</body>
-</html>
+</x-layout.base>
