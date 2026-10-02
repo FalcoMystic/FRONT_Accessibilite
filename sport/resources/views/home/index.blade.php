@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-[40%] border-8 border-[#171717] bg-[#d9d5cf] shadow-[14px_14px_0_#6f28d9]">
-                    <img class="h-full w-full object-cover object-center" src="{{ asset('img/Salle de sport.jpg') }}" alt="Personne réalisant un équilibre sur les mains dans une salle de sport">
+                    <img class="h-full w-full object-cover object-center" src="{{ asset('img/Salle de sport.jpg') }}" alt="Image d'une salle de sport avec des personnes qui s'entraînent>
                 </div>
             </section>
 
