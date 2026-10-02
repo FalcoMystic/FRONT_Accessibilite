@@ -21,6 +21,16 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Netlify test deployment
+
+This branch includes a static export for Netlify. Netlify runs the Laravel application
+during its build, generates the Vite assets, and exports the public pages to `public/`.
+The deployed site does not run PHP at request time, so dynamic Laravel features are
+not available on Netlify. Use a PHP host for the full Laravel application.
+
+In Netlify, select this repository and the `deploy/netlify-test` branch. The
+`netlify.toml` file provides the build command and publishes the `public` directory.
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
