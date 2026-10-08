@@ -5,12 +5,14 @@
     font-weight: 400;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Space Grotesk';
     src: url('../font/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
+
 @import "tailwindcss";
 
 /*
@@ -391,6 +393,7 @@ h2 {
         flex-wrap: wrap;
     }
 }
+
 @theme {
     --color-noir: var(--couleur-noir);
     --color-fond: var(--couleur-fond);
@@ -432,6 +435,7 @@ h2 {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
