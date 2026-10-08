@@ -11,17 +11,6 @@
 <body class="min-h-screen bg-fond text-texte-clair antialiased">
     <x-commun.header />
 
-    <nav class="mx-auto max-w-7xl px-5 pt-4 sm:px-8" aria-label="Fil d’Ariane">
-        <ol class="flex flex-wrap items-center gap-2 text-sm text-texte-secondaire">
-            <li>
-                <a class="underline-offset-4 hover:text-violet hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet"
-                    href="{{ route('home.index') }}">Accueil</a>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li aria-current="page" class="font-semibold text-texte-clair">Callisthénie</li>
-        </ol>
-    </nav>
-
     <main id="contenu" tabindex="-1">
         <section
             class="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-24">
@@ -51,30 +40,33 @@
             </div>
         </section>
 
-        <nav id="sommaire-page" class="mx-auto max-w-7xl px-5 py-6 sm:px-8" aria-label="Sommaire de la page">
-            <h2 class="text-lg font-bold">Dans cette page</h2>
-            <ul class="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+        <nav id="sommaire-page" class="border-y border-bordure bg-noir px-5 py-8 sm:px-8 lg:py-10"
+            aria-label="Sommaire de la page">
+            <div class="mx-auto max-w-7xl">
+                <h2 class="text-lg font-bold uppercase tracking-wide text-violet">Dans cette page</h2>
+                <ul class="mt-5 flex flex-wrap gap-3 text-sm">
                 <li>
-                    <a class="underline-offset-4 hover:text-violet hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet"
+                    <a class="inline-flex border border-bordure bg-fond px-4 py-3 text-texte-clair transition hover:border-violet hover:bg-violet hover:text-noir focus:outline-none focus-visible:ring-4 focus-visible:ring-violet"
                         href="#benefices">Bénéfices</a>
                 </li>
                 <li>
-                    <a class="underline-offset-4 hover:text-violet hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet"
+                    <a class="inline-flex border border-bordure bg-fond px-4 py-3 text-texte-clair transition hover:border-violet hover:bg-violet hover:text-noir focus:outline-none focus-visible:ring-4 focus-visible:ring-violet"
                         href="#progression">Progression</a>
                 </li>
                 <li>
-                    <a class="underline-offset-4 hover:text-violet hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet"
+                    <a class="inline-flex border border-bordure bg-fond px-4 py-3 text-texte-clair transition hover:border-violet hover:bg-violet hover:text-noir focus:outline-none focus-visible:ring-4 focus-visible:ring-violet"
                         href="#avantages">Avantages</a>
                 </li>
                 <li>
-                    <a class="underline-offset-4 hover:text-violet hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet"
+                    <a class="inline-flex border border-bordure bg-fond px-4 py-3 text-texte-clair transition hover:border-violet hover:bg-violet hover:text-noir focus:outline-none focus-visible:ring-4 focus-visible:ring-violet"
                         href="#photos">Photos</a>
                 </li>
                 <li>
-                    <a class="underline-offset-4 hover:text-violet hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet"
+                    <a class="inline-flex border border-bordure bg-fond px-4 py-3 text-texte-clair transition hover:border-violet hover:bg-violet hover:text-noir focus:outline-none focus-visible:ring-4 focus-visible:ring-violet"
                         href="#faq">Foire aux questions</a>
                 </li>
-            </ul>
+                </ul>
+            </div>
         </nav>
 
         <section id="benefices" class="border-y border-bordure bg-blanc px-5 py-16 text-noir sm:px-8 lg:py-24">
