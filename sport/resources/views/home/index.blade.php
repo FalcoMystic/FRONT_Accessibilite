@@ -9,7 +9,7 @@
                     <p tabindex="0" class="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-medium-purple-400)]">Mouvement Force Équilibre</p>
                     <h1 tabindex="0" id="hero-title" class="font-['Tanker'] text-6xl leading-[0.9] tracking-normal sm:text-8xl">Construis ta<br><em class="text-[var(--color-medium-purple-400)]">meilleure version</em></h1>
                     <p tabindex="0" class="mt-8 max-w-lg text-lg leading-relaxed text-[var(--color-text-muted)]">Des repères clairs pour t'entraîner avec intention, progresser à ton rythme et nourrir ce qui te fait avancer.</p>
-                    <a class="mt-10 inline-flex items-center gap-5 rounded-full bg-[var(--color-background)] px-6 py-4 text-sm font-semibold text-[var(--color-text)] transition hover:bg-[var(--color-purple-500)] focus:outline-none focus:ring-4 focus:ring-[var(--color-text)] focus:ring-offset-2" href="#disciplines">Commencer l'exploration <span aria-hidden="true">↗</span></a>
+                    <a class="mt-10 inline-flex items-center gap-5 rounded-full bg-[var(--color-surface-light)] px-6 py-4 text-sm font-semibold text-[var(--color-text-dark)] transition hover:bg-[var(--color-purple-500)] focus:outline-none focus:ring-4 focus:ring-[var(--color-text)] focus:ring-offset-2" href="#disciplines">Commencer l'exploration <span aria-hidden="true">↗</span></a>
                 </div>
 
                 <div class="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-[40%] border-8 border-[#171717] bg-[#d9d5cf] shadow-[14px_14px_0_#6f28d9]">
