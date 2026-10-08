@@ -4,7 +4,7 @@
 
         <main id="contenu" tabindex="-1" class="mx-auto max-w-7xl px-6 py-20 sm:px-10 lg:px-16 lg:py-28">
             <section aria-labelledby="accessibilite-title">
-                <p tabindex="0" class="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-medium-purple-400)]"><span class="h-px w-8 bg-[var(--color-medium-purple-400)]" aria-hidden="true"></span> Navigation inclusive</p>
+                <p tabindex="0" class="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-medium-purple-400)]">Navigation inclusive</p>
                 <h1 tabindex="0" id="accessibilite-title" class="max-w-4xl font-['Tanker'] text-6xl leading-[0.9] sm:text-8xl">Page d'<em class="text-[var(--color-medium-purple-400)]">accessibilité</em></h1>
                 <p tabindex="0" class="mt-8 max-w-3xl text-lg leading-relaxed text-[var(--color-text-muted)]">Cette page rassemble les repères utiles pour naviguer avec le clavier, comprendre la structure du site et retrouver rapidement les contenus principaux.</p>
             </section>
