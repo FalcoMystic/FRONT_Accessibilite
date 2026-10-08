@@ -6,6 +6,7 @@ const messages = {
     prenom: "Veuillez saisir votre prénom.",
     email: "Veuillez saisir une adresse e-mail valide, par exemple : nom@exemple.fr.",
     niveau: "Veuillez choisir votre niveau de pratique.",
+    consentement: "Veuillez cocher cette case pour consentir à l'utilisation de vos données personnelles.",
 };
 
 function showError(control, key) {
@@ -44,6 +45,14 @@ form.addEventListener("submit", (event) => {
     } else {
         showError(fieldset, "niveau");
         firstInvalid ??= radios[0];
+    }
+
+    const consent = document.getElementById("consentement");
+    if (consent.checked) {
+        clearError(consent, "consentement");
+    } else {
+        showError(consent, "consentement");
+        firstInvalid ??= consent;
     }
 
     if (firstInvalid) {

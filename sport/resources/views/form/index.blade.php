@@ -20,7 +20,7 @@
                         Contactez-nous pour obtenir des conseils adaptés à votre niveau.</p>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <h3 class="text-xl font-bold">Les noms de champs suivit de <span aria-hidden="true">"- obligatoire"</span> sont indispensables à la complétion du formulaire.</h3>
+                    <h3 class="text-xl font-bold">Les noms de champs suivit de <span aria-hidden="true">"* - obligatoire"</span> sont indispensables à la complétion du formulaire.</h3>
                     <form id="formulaire-contact" action="" aria-labelledby="titre-contact" novalidate
                         class="border-2 border-noir bg-blanc p-5 text-noir sm:p-7">
 
@@ -54,9 +54,11 @@
                             <p class="mt-4" id="niveau-erreur" hidden></p>
                         </fieldset>
 
-                        <label class="mt-6 flex gap-3 leading-6"><input class="mt-1 accent-violet" type="checkbox"
-                                name="informations">
+                        <label class="mt-6 flex gap-3 leading-6" for="consentement">
+                            <input id="consentement" class="mt-1 accent-violet" type="checkbox"
+                                name="consentement" aria-describedby="consentement-erreur" required>
                             <span>J'accepte que mes données soient utilisées pour être recontacté(e) à des fins de communication.</span></label>
+                        <p class="mt-2" id="consentement-erreur" hidden></p>
                         <button
                             class="mt-6 w-full border-2 border-noir bg-fond px-5 py-3 text-sm font-bold uppercase tracking-wide text-texte-clair transition hover:bg-violet focus:outline-none focus-visible:ring-4 focus-visible:ring-noir"
                             type="submit">Envoyer le message</button>
