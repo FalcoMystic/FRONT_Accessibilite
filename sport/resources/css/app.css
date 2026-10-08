@@ -13,7 +13,10 @@
 }
 @import "tailwindcss";
 
-
+@theme {
+    --font-display: 'Tanker', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+}
 
 :root {
     --color-background: #17151a;
@@ -23,6 +26,16 @@
     --color-text-muted: #c8c4ca;
     --color-gray: #6e6963;
     --color-purple: #9d5cff;
+    --color-medium-purple-50: #f9f5ff;
+    --color-medium-purple-100: #f0e7ff;
+    --color-medium-purple-200: #e3d3ff;
+    --color-medium-purple-300: #cdb0ff;
+    --color-medium-purple-400: #b07eff;
+    --color-medium-purple-500: #9d5cff;
+    --color-medium-purple-600: #7d2af3;
+    --color-medium-purple-700: #691ad6;
+    --color-medium-purple-800: #5b1aaf;
+    --color-medium-purple-900: #4b178c;
+    --color-medium-purple-950: #300269;
     --color-border: rgba(231, 228, 232, 0.24);
 }
-
