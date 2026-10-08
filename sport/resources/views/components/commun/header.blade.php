@@ -11,6 +11,7 @@
         <a class="{{ request()->routeIs('calisthenics.index') ? 'text-[var(--color-purple)]' : 'transition hover:text-[var(--color-purple)]' }}" href="{{ route('calisthenics.index') }}" @if (request()->routeIs('calisthenics.index')) aria-current="page" @endif>Callisthénie</a>
         <a class="{{ request()->routeIs('musculation.index') ? 'text-[var(--color-purple)]' : 'transition hover:text-[var(--color-purple)]' }}" href="{{ route('musculation.index') }}" @if (request()->routeIs('musculation.index')) aria-current="page" @endif>Musculation</a>
         <a class="{{ request()->routeIs('diet.index') ? 'text-[var(--color-purple)]' : 'transition hover:text-[var(--color-purple)]' }}" href="{{ route('diet.index') }}" @if (request()->routeIs('diet.index')) aria-current="page" @endif>Nutrition</a>
+        <a class="{{ request()->routeIs('form.index') ? 'text-[var(--color-purple)]' : 'transition hover:text-[var(--color-purple)]' }}" href="{{ route('form.index') }}" @if (request()->routeIs('form.index')) aria-current="page" @endif>Contact</a>
     </nav>
 
     <a class="order-2 inline-flex items-center gap-2 rounded-full border border-[var(--color-text)] px-4 py-2 text-xs font-semibold uppercase tracking-widest transition hover:bg-[var(--color-text)] hover:text-[var(--color-text-dark)] sm:order-3" href="{{ route('home.index') }}#disciplines">

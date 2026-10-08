@@ -4,12 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/formCalisthenics.js'])
     <title>Callisthénie : bénéfices et conseils d’entraînement</title>
 </head>
 
 <body class="min-h-screen bg-fond text-texte-clair antialiased">
     <x-commun.header />
+
+    <nav class="mx-auto max-w-7xl px-5 pt-4 sm:px-8" aria-label="Fil d’Ariane">
+        <ol class="flex flex-wrap items-center gap-2 text-sm text-texte-secondaire">
+            <li>
+                <a class="underline-offset-4 hover:text-violet hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet"
+                    href="{{ route('home.index') }}">Accueil</a>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" class="font-semibold text-texte-clair">Callisthénie</li>
+        </ol>
+    </nav>
 
     <main id="contenu" tabindex="-1">
         <section
@@ -29,12 +40,42 @@
                 </a>
             </div>
             <div class="aspect-video overflow-hidden border border-bordure bg-noir">
+                <a href="#sommaire-page"
+                    class="sr-only focus:not-sr-only focus:absolute focus:z-10 focus:bg-blanc focus:px-4 focus:py-3 focus:text-noir focus:outline-none focus-visible:ring-4 focus-visible:ring-violet">
+                    Passer la vidéo et accéder au sommaire de la page
+                </a>
                 <iframe class="h-full w-full" src="https://www.youtube.com/embed/Uc9hQGqV-DU"
-                    title="Vidéo sur la callisthénie"
+                    title="Vidéo sur la callisthénie, durée : 9 minutes et 40 secondes"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
         </section>
+
+        <nav id="sommaire-page" class="mx-auto max-w-7xl px-5 py-6 sm:px-8" aria-label="Sommaire de la page">
+            <h2 class="text-lg font-bold">Dans cette page</h2>
+            <ul class="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                <li>
+                    <a class="underline-offset-4 hover:text-violet hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet"
+                        href="#benefices">Bénéfices</a>
+                </li>
+                <li>
+                    <a class="underline-offset-4 hover:text-violet hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet"
+                        href="#progression">Progression</a>
+                </li>
+                <li>
+                    <a class="underline-offset-4 hover:text-violet hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet"
+                        href="#avantages">Avantages</a>
+                </li>
+                <li>
+                    <a class="underline-offset-4 hover:text-violet hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet"
+                        href="#photos">Photos</a>
+                </li>
+                <li>
+                    <a class="underline-offset-4 hover:text-violet hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-violet"
+                        href="#faq">Foire aux questions</a>
+                </li>
+            </ul>
+        </nav>
 
         <section id="benefices" class="border-y border-bordure bg-blanc px-5 py-16 text-noir sm:px-8 lg:py-24">
             <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
@@ -47,7 +88,8 @@
             </div>
         </section>
 
-        <section aria-label="Principe de progression" class="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
+        <section id="progression" aria-label="Principe de progression"
+            class="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
             <aside class="border-l-8 border-violet pl-6 sm:pl-8">
                 <blockquote class="max-w-4xl text-2xl font-black uppercase leading-tight sm:text-4xl">« La progression
                     ne se mesure pas seulement à la difficulté des mouvements, mais aussi à la maîtrise et à la
@@ -57,7 +99,7 @@
             </aside>
         </section>
 
-        <section class="border-y border-bordure bg-noir px-5 py-16 sm:px-8 lg:py-24">
+        <section id="avantages" class="border-y border-bordure bg-noir px-5 py-16 sm:px-8 lg:py-24">
             <div class="mx-auto max-w-7xl">
                 <h2 id="titre-avantages" class="text-4xl font-black uppercase leading-tight sm:text-6xl">Avantages</h2>
                 <ul class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -88,7 +130,7 @@
             </div>
         </section>
 
-        <section class="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
+        <section id="photos" class="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
             <h2 id="titre-photos" class="text-4xl font-black uppercase leading-tight sm:text-6xl">Photos</h2>
             <div class="mt-12 grid gap-5 md:grid-cols-3">
                 <img class="aspect-[3/4] w-full border border-bordure object-cover" src="{{ asset('img/flag.webp') }}"
@@ -100,7 +142,7 @@
             </div>
         </section>
 
-        <section class="border-y border-bordure bg-blanc px-5 py-16 text-noir sm:px-8 lg:py-24">
+        <section id="faq" class="border-y border-bordure bg-blanc px-5 py-16 text-noir sm:px-8 lg:py-24">
             <div class="mx-auto max-w-7xl">
                 <h2 id="titre-faq" class="text-4xl font-black uppercase leading-tight sm:text-6xl">Foire aux questions
                 </h2>
@@ -121,53 +163,6 @@
                         <p class="mt-5 leading-7">Deux à trois séances par semaine suffisent pour progresser.
                             L'important est de rester régulier et de laisser au corps le temps de récupérer.</p>
                     </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-violet px-5 py-16 text-noir sm:px-8 lg:py-24">
-            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-                <div>
-                    <h2 id="titre-contact" class="text-4xl font-black uppercase leading-tight sm:text-6xl">Contact</h2>
-                    <p class="mt-6 text-lg leading-8">Une question sur la callisthénie ou sur les entraînements ?
-                        Contactez-nous pour obtenir des conseils adaptés à votre niveau.</p>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <h3 class="text-xl font-bold">Les champs suivit d'<span aria-hidden="true">obligatoire</span> sont indispensables à la complétion du formulaire.</h3>
-                    <form id="formulaire-contact" action="" aria-labelledby="titre-contact"
-                        class="border-2 border-noir bg-blanc p-5 sm:p-7">
-                        <label class="block text-sm font-bold uppercase tracking-wide" for="nom">Nom - obligatoire</label>
-                        <input id="nom"
-                            class="mt-3 block w-full border-2 border-noir bg-blanc px-4 py-3 text-base text-noir outline-none focus:border-violet focus:ring-4 focus:ring-violet"
-                            type="text" name="nom" placeholder="Keller" autocomplete="family-name" aria-describedby="nom-erreur" required>
-                        <p id="nom-erreur">Format attendu : Keller</p>
-                        <label class="mt-5 block text-sm font-bold uppercase tracking-wide" for="prenom">Prénom - obligatoire</label>
-                        <input id="prenom"
-                            class="mt-3 block w-full border-2 border-noir bg-blanc px-4 py-3 text-base text-noir outline-none focus:border-violet focus:ring-4 focus:ring-violet"
-                            type="text" name="prenom" placeholder="Justin" autocomplete="given-name" aria-describedby="prenom-erreur" required>
-                        <p id="prenom-erreur">Format attendu : Justin</p>
-                        <label class="mt-5 block text-sm font-bold uppercase tracking-wide" for="email">Adresse
-                            e-mail - obligatoire</label>
-                        <input id="email"
-                            class="mt-3 block w-full border-2 border-noir bg-blanc px-4 py-3 text-base text-noir outline-none focus:border-violet focus:ring-4 focus:ring-violet"
-                            type="email" name="email" placeholder="justin@gmail.com" autocomplete="email" aria-describedby="email-erreur" required>
-                        <p id="email-erreur">Format attendu : nom@exemple.fr</p>
-                        <fieldset class="mt-6">
-                            <legend class="text-sm font-bold uppercase tracking-wide">Niveau de pratique - obligatoire</legend>
-                            <div class="mt-3 flex flex-col gap-3">
-                                <label><input class="accent-violet" type="radio" name="niveau" value="debutant" required>
-                                    Débutant</label>
-                                <label><input class="accent-violet" type="radio" name="niveau" value="intermediaire">
-                                    Intermédiaire</label>
-                            </div>
-                        </fieldset>
-                        <label class="mt-6 flex gap-3 leading-6"><input class="mt-1 accent-violet" type="checkbox"
-                                name="informations">
-                            <span>Je souhaite recevoir des conseils et des informations sur la callisthénie.</span></label>
-                        <button
-                            class="mt-6 w-full border-2 border-noir bg-fond px-5 py-3 text-sm font-bold uppercase tracking-wide text-texte-clair transition hover:bg-violet focus:outline-none focus-visible:ring-4 focus-visible:ring-noir"
-                            type="submit">Envoyer le message</button>
-                    </form>
                 </div>
             </div>
         </section>
