@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Conseils accessibles pour adapter son alimentation à la musculation et à la calisthénie.">
+    <meta name="description" content="Conseils accessibles pour adapter son alimentation à la musculation et à la Callisthénie.">
     <title>Nutrition | TopDiff</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>

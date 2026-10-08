@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-[40%] border-8 border-[#171717] bg-[#d9d5cf] shadow-[14px_14px_0_#6f28d9]">
-                    <img class="h-full w-full object-cover object-center" src="{{ asset('img/Salle de sport.jpg') }}" alt="Personne réalisant un équilibre sur les mains dans une salle de sport">
+                    <img class="h-full w-full object-cover object-center" src="{{ asset('img/Salle de sport.jpg') }}" alt="Image d'une salle de sport avec des personnes qui s'entraînent>
                 </div>
             </section>
 
@@ -29,7 +29,7 @@
                 <div class="grid gap-4 md:grid-cols-3">
                     <a class="group flex min-h-72 flex-col justify-between rounded-3xl bg-[var(--color-purple)] p-7 text-[var(--color-text)] transition hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[var(--color-text)] focus:ring-offset-2" href="{{ route('calisthenics.index') }}">
                         <span class="flex items-center justify-between text-xs font-semibold uppercase tracking-widest"><span>01 / 03</span><span aria-hidden="true">↗</span></span>
-                        <span><strong class="block font-display text-4xl font-normal">Calisthénie</strong><span class="mt-2 block text-sm text-[var(--color-text)]/75">Maîtrise ton poids.</span></span>
+                        <span><strong class="block font-display text-4xl font-normal">Callisthénie</strong><span class="mt-2 block text-sm text-[var(--color-text)]/75">Maîtrise ton poids.</span></span>
                         <span class="self-end text-3xl transition group-hover:translate-x-1" aria-hidden="true">→</span>
                     </a>
                     <a class="group flex min-h-72 flex-col justify-between rounded-3xl bg-[var(--color-surface-light)] p-7 text-[var(--color-text-dark)] transition hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[var(--color-text)] focus:ring-offset-2" href="{{ route('musculation.index') }}">
@@ -39,7 +39,7 @@
                     </a>
                     <a class="group flex min-h-72 flex-col justify-between rounded-3xl border border-[var(--color-border)] bg-[var(--color-text)] p-7 text-[var(--color-text-dark)] transition hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[var(--color-text)] focus:ring-offset-2" href="{{ route('diet.index') }}">
                         <span class="flex items-center justify-between text-xs font-semibold uppercase tracking-widest"><span>03 / 03</span><span aria-hidden="true">◒</span></span>
-                        <span><strong class="block font-display text-4xl font-normal">Diet</strong><span class="mt-2 block text-sm text-[var(--color-gray)]">Nourris ton énergie.</span></span>
+                        <span><strong class="block font-display text-4xl font-normal">Nutrition</strong><span class="mt-2 block text-sm text-[var(--color-gray)]">Nourris ton énergie.</span></span>
                         <span class="self-end text-3xl transition group-hover:translate-x-1" aria-hidden="true">→</span>
                     </a>
                 </div>
