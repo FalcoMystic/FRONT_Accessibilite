@@ -32,6 +32,11 @@ class SitemapController extends Controller
                 'url' => route('diet.index'),
             ],
             [
+                'title' => 'Contact',
+                'description' => 'Envoie une question ou une demande à l’équipe TopDiff.',
+                'url' => route('form.index'),
+            ],
+            [
                 'title' => 'Accessibilité',
                 'description' => 'Retrouve les engagements et les repères de navigation du site.',
                 'url' => route('accessibilite.index'),
