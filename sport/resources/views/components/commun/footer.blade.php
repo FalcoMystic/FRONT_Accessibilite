@@ -3,5 +3,5 @@
     <span tabindex="0">Ta progression, ton rythme</span>
     <a href="{{ route('accessibilite.index') }}" class="text-white underline-offset-4 hover:underline">Accessibilité</a>
     <a href="{{ route('sitemap.index') }}" class="text-white underline-offset-4 hover:underline">Plan du site</a>
-    <a href="#contenu" class="text-white underline-offset-4 hover:underline">Retour en haut <span aria-hidden="true">↑</span></a>
+    <a href="#header" class="text-white underline-offset-4 hover:underline">Retour en haut <span aria-hidden="true">↑</span></a>
 </footer>

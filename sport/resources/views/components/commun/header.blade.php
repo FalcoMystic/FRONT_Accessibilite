@@ -1,4 +1,4 @@
-<header class="relative z-30 flex flex-wrap items-center justify-between gap-6 px-6 py-6 sm:px-10 lg:px-16">
+<header id="header" class="relative z-30 flex flex-wrap items-center justify-between gap-6 px-6 py-6 sm:px-10 lg:px-16">
     <a class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:rounded focus:bg-[var(--color-text)] focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-[var(--color-text-dark)] focus:ring-4 focus:ring-[var(--color-medium-purple-500)]" href="#contenu">Aller au contenu principal</a>
 
     <a class="flex items-center gap-2 font-['Tanker'] text-2xl" href="{{ route('home.index') }}">
