@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Conseils accessibles pour adapter son alimentation à la musculation et à la Callisthénie.">
-    <title>Nutrition | TopDiff</title>
+    <title>Nutrition - TopDiff</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen bg-[var(--color-background)] text-[var(--color-text)] antialiased">

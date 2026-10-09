@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/formCalisthenics.js'])
-    <title>Callisthénie : bénéfices et conseils d’entraînement</title>
+    <title>Callisthénie : bénéfices et conseils d’entraînement - TopDiff</title>
 </head>
 
 <body class="min-h-screen bg-fond text-texte-clair antialiased">
